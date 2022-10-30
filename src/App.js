@@ -1,11 +1,11 @@
 import './App.css'
+import { NavComponent } from './components/NavComponent'
 
 function App () {
   return (
-    <div className='AppContainer'>
-      <h1>probando heading styles</h1>
-      <p>probando estilos</p>
-    </div>
+    < >
+      <NavComponent />
+    </>
   )
 }
 
