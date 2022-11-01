@@ -1,23 +1,32 @@
 /*  NavBar Styles */
 header {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 100px;
+  height: 12%;
 }
 
 
-.logoContainer {
-  margin-right: auto;
+.div-logo {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+nav {
+  width: 100%;
+  display: inline-flex;
 }
 
 .toggle-btn {
   display: none;
 }
 
+.nav-links {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .nav-links li {
   display: inline-block;
-
 }
 
 
@@ -26,32 +35,120 @@ header {
   text-decoration: none;
   margin-left: 30px;
   margin-right: 0px;
-  color: gray;
+  color: hsl(236, 13%, 42%);
+
 }
 
-@media (max-width:400px) {
+@media (max-width:700px) {
   .toggle-btn {
     display: flex;
+    padding: 30px;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: auto;
   }
 
-  nav {
+  .nav-links {
     display: none;
   }
 
-  .logoContainer {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
 }
 
 .NavIndex:visited {
-  color: gray;
+  color: hsl(236, 13%, 42%);
 }
 
 .NavIndex:hover {
   color: hsl(35, 77%, 62%);
 }
+
+/*-------------*/
+
+/* Feature Component on Desktop*/
+main {
+  height: 88%;
+  font-size: 14px;
+}
+
+.Features-container {
+  height: 60%;
+  width: 100%;
+  display: inline-flex;
+
+}
+
+.Features-container p {
+  color: hsl(236, 13%, 42%);
+  font-family: Inter-Regular;
+}
+
+.Features-container h1 {
+  font-family: Inter-ExtraBold;
+}
+
+
+
+.info {
+  margin-right: 10px;
+  width: 65%;
+}
+
+.info img {
+  width: 100%;
+}
+
+.info-articles-container {
+  padding-top: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.info-articles-container article {
+  width: 50%;
+}
+
+.info-articles-container article h1 {
+  font-size: 40px;
+  padding-right: 25px;
+}
+
+
+
+.news-sections {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 2%;
+  background-color: rgb(0, 0, 25);
+  width: 35%;
+}
+
+.news-sections article {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.news-sections hr {
+  border-color: hsl(236, 13%, 42%);
+}
+
+.news-sections h1 {
+  color: hsl(35, 77%, 62%);
+}
+
+
+.news-sections article h2 {
+  padding-bottom: 15px;
+  color: hsl(36, 100%, 99%);
+  font-family: Inter-Bold;
+}
+
+.news-sections article p {
+  color: hsl(236, 13%, 42%);
+}
+
+
+
+
 
 /*-------------*/

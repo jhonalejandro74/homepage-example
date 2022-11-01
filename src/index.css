@@ -25,11 +25,13 @@
   padding: 0;
 }
 
-body p * {
+p * {
   font-size: 15px;
+
 }
 
 #root {
+  height: 100vh;
   padding-left: 10%;
   padding-right: 10%;
 

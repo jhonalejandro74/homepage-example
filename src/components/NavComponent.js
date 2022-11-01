@@ -1,14 +1,25 @@
+import { useState } from 'react'
 import mainHomeLogo from '../assets/images/logo.svg'
 import iconMenu from '../assets/images/icon-menu.svg'
+import iconMenuClose from '../assets/images/icon-menu-close.svg'
 
 export function NavComponent () {
+  const [iconState, setIconState] = useState({ icon: iconMenu, showRightBar: false })
+
+  const handleIconClick = () => {
+    iconState.showRightBar
+      ? setIconState({ icon: iconMenu, showRightBar: false })
+      : setIconState({ icon: iconMenuClose, showRightBar: true })
+  }
+
+  console.log(iconState.showRightBar)
+
   return (
     <header>
-      <div className='logoContainer'>
-        <img src={mainHomeLogo} />
-      </div>
-      <a className='toggle-btn' href='#'><img src={iconMenu} /></a>
       <nav>
+        <div className='div-logo'>
+          <img src={mainHomeLogo} />
+        </div>
         <ul className='nav-links'>
           <li>
             <p><a className='NavIndex' href='https://github.com/jdocdev/NavbarsFlexbox/blob/main/opcion2/index.html'>Home</a></p>
@@ -26,6 +37,8 @@ export function NavComponent () {
             <p><a className='NavIndex' href='#'>Categories</a></p>
           </li>
         </ul>
+        <label className='toggle-btn' onClick={handleIconClick}><img src={iconState.icon} /></label>
+
       </nav>
 
     </header>
