@@ -30,6 +30,10 @@ p * {
 
 }
 
+footer {
+  margin-bottom: 0px;
+}
+
 #root {
   height: 100vh;
   padding-left: 10%;

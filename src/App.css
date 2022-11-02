@@ -39,7 +39,7 @@ nav {
 
 }
 
-@media (max-width:700px) {
+@media (max-width:750px) {
   .toggle-btn {
     display: flex;
     padding: 30px;
@@ -89,6 +89,8 @@ main {
 
 
 .info {
+  display: flex;
+  flex-direction: column;
   margin-right: 10px;
   width: 65%;
 }
@@ -98,13 +100,16 @@ main {
 }
 
 .info-articles-container {
-  padding-top: 10px;
+  margin-top: auto;
   display: flex;
   width: 100%;
 }
 
 .info-articles-container article {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .info-articles-container article h1 {
@@ -112,7 +117,18 @@ main {
   padding-right: 25px;
 }
 
+.info-articles-container article button {
+  margin-top: auto;
+  width: 50%;
+  height: 40px;
+  background-color: rgb(224, 103, 88);
+  color: hsl(36, 100%, 99%);
+  border: none;
+}
 
+.info-articles-container article p {
+  margin-bottom: auto;
+}
 
 .news-sections {
   display: flex;
@@ -147,8 +163,29 @@ main {
   color: hsl(236, 13%, 42%);
 }
 
-
-
-
-
 /*-------------*/
+/* Art Boxes Styles*/
+
+.boxes-Container {
+  display: flex;
+  height: 35%;
+}
+
+.boxes-Container article {
+  display: inline-flex;
+}
+
+.boxes-Container article section {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.boxImage {
+  width: 100px;
+  height: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}

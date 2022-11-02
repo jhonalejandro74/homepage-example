@@ -1,6 +1,7 @@
 import './App.css'
 import { NavComponent } from './components/NavComponent'
 import { FeatureComponent } from './components/FeatureComponent'
+import { ArtBoxes } from './components/ArtBoxes'
 
 function App () {
   return (
@@ -8,6 +9,7 @@ function App () {
       <NavComponent />
       <main>
         <FeatureComponent />
+        <ArtBoxes />
       </main>
     </>
   )
