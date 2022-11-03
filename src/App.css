@@ -1,7 +1,7 @@
 /*  NavBar Styles */
 header {
   display: flex;
-  height: 12%;
+  height: 10vh;
 }
 
 
@@ -19,7 +19,7 @@ nav {
   display: none;
 }
 
-.nav-links {
+.menu {
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
@@ -35,23 +35,6 @@ nav {
   text-decoration: none;
   margin-left: 30px;
   margin-right: 0px;
-  color: hsl(236, 13%, 42%);
-
-}
-
-@media (max-width:750px) {
-  .toggle-btn {
-    display: flex;
-    padding: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
 }
 
 .NavIndex:visited {
@@ -62,12 +45,52 @@ nav {
   color: hsl(35, 77%, 62%);
 }
 
+/*NavBar on mobile*/
+
+/* when click menu */
+.activeMenu {
+  background-color: white;
+  height: 100vh;
+  width: 60vw;
+  left: 33vw;
+  position: fixed;
+}
+
+.activeMenu ul {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+
+}
+
+.activeMenu label {
+  justify-content: flex-end;
+
+}
+
+/*------------------*/
+.Mobile-toggle-btn {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+
+.Mobile-nav-links {
+  display: none;
+}
+
 /*-------------*/
 
 /* Feature Component on Desktop*/
 main {
-  height: 88%;
-  font-size: 14px;
+  height: 90%;
 }
 
 .Features-container {
@@ -76,17 +99,6 @@ main {
   display: inline-flex;
 
 }
-
-.Features-container p {
-  color: hsl(236, 13%, 42%);
-  font-family: Inter-Regular;
-}
-
-.Features-container h1 {
-  font-family: Inter-ExtraBold;
-}
-
-
 
 .info {
   display: flex;
@@ -112,18 +124,23 @@ main {
 
 }
 
-.info-articles-container article h1 {
-  font-size: 40px;
+.titleIntro {
+  font-family: Inter-ExtraBold;
+  font-size: 42px;
   padding-right: 25px;
 }
 
-.info-articles-container article button {
+.RmButton {
   margin-top: auto;
   width: 50%;
   height: 40px;
   background-color: rgb(224, 103, 88);
   color: hsl(36, 100%, 99%);
   border: none;
+}
+
+.RmButton:hover {
+  background-color: black;
 }
 
 .info-articles-container article p {
@@ -144,6 +161,14 @@ main {
   margin-bottom: auto;
 }
 
+.news-sections article a {
+  text-decoration: none;
+}
+
+.toOrangeHover:hover {
+  color: hsl(35, 77%, 62%);
+}
+
 .news-sections hr {
   border-color: hsl(236, 13%, 42%);
 }
@@ -159,12 +184,72 @@ main {
   font-family: Inter-Bold;
 }
 
-.news-sections article p {
-  color: hsl(236, 13%, 42%);
+
+
+/* Feature Component on Mobile */
+.Mobile-Features-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
 }
 
+.Mobile-info {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.Mobile-info-articles-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Mobile-info-articles-container article {
+  display: flex;
+  flex-direction: column;
+}
+
+.Mobile-info-articles-container h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.Mobile-info-articles-container article button {
+  margin-top: 15px;
+}
+
+.Mobile-info-articles-container article p {
+  line-height: 2;
+}
+
+.Mobile-news-sections {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  background-color: rgb(0, 0, 25);
+  height: 90vh;
+}
+
+.Mobile-news-sections article {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.Mobile-news-sections h1 {
+  color: hsl(35, 77%, 62%);
+}
+
+.Mobile-news-sections article h2 {
+  padding-bottom: 15px;
+  color: hsl(36, 100%, 99%);
+  font-family: Inter-Bold;
+}
+
+
 /*-------------*/
-/* Art Boxes Styles*/
+/* Desktop Arts Boxes Styles*/
 
 .boxes-Container {
   display: flex;
@@ -173,19 +258,57 @@ main {
 
 .boxes-Container article {
   display: inline-flex;
+  align-items: center;
 }
 
 .boxes-Container article section {
-  margin-top: auto;
-  margin-bottom: auto;
+
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.boxes-Container article section h1 {
+  font-size: 24px;
+  font-family: Inter-ExtraBold;
+}
+
+.boxes-Container article section h2 {
+  font-family: Inter-Bold;
 }
 
 .boxImage {
   width: 100px;
   height: 100px;
+
+}
+
+.content-Info {
+  color: hsl(236, 13%, 42%);
+}
+
+.boxes-Container article section a {
+  text-decoration: solid;
+  color: black;
+}
+
+/* Mobile Arts Boxes styles*/
+.Mobile-boxes-Container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Mobile-boxes-Container article {
+  display: flex;
   margin-top: auto;
   margin-bottom: auto;
+}
 
+.Mobile-boxes-Container article img {
+  width: 150px;
+  height: 150px;
+}
+
+.Mobile-boxes-Container article section {
+  padding-left: 40px;
 }
