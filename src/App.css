@@ -19,6 +19,10 @@ nav {
   display: none;
 }
 
+.menu ul a {
+  color: hsl(236, 13%, 42%);
+}
+
 .menu {
   margin-left: auto;
   margin-top: auto;
