@@ -71,6 +71,21 @@ nav {
 
 }
 
+.activeMenu ul {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+
+}
+
+.activeMenu ul a {
+  color: hsl(236, 13%, 42%);
+
+}
+
 /*------------------*/
 .Mobile-toggle-btn {
   display: flex;
@@ -247,6 +262,11 @@ main {
   font-family: Inter-Bold;
 }
 
+.Mobile-news-sections article a {
+  text-decoration: none;
+}
+
+
 
 /*-------------*/
 /* Desktop Arts Boxes Styles*/
@@ -287,7 +307,7 @@ main {
 }
 
 .boxes-Container article section a {
-  text-decoration: solid;
+  text-decoration: none;
   color: black;
 }
 
@@ -311,4 +331,14 @@ main {
 
 .Mobile-boxes-Container article section {
   padding-left: 40px;
+}
+
+.Mobile-boxes-Container article section a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.Mobile-boxes-Container article section h2 {
+  font-family: Inter-Bold;
 }
